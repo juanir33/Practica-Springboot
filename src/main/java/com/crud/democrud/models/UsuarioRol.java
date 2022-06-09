@@ -32,6 +32,12 @@ public class  UsuarioRol {
         this.rol = rol;
     }
 
+    public UsuarioRol(UsuarioModel idUsuario, String rol) {
+
+        this.idUsuario = idUsuario;
+        this.rol = rol;
+    }
+
     public Long getIdRol() {
         return idRol;
     }
