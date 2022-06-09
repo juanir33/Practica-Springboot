@@ -16,7 +16,7 @@ public class  UsuarioRol {
 
 
     @ManyToOne()
-    @JoinColumn(name = "id_usuario")
+    @JoinColumn(name = "id_usuario", referencedColumnName = "id")
     private UsuarioModel idUsuario;
 
     private String rol;

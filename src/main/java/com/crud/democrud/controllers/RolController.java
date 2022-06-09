@@ -23,5 +23,5 @@ public class RolController {
 
     @PostMapping()
 
-    public UsuarioRol guardarNuevoRol(@RequestBody UsuarioRol rol, UsuarioModel usuarioid){return rolService.guardarNuevoRol(rol, usuarioid);}
+    public UsuarioRol guardarNuevoRol(@RequestBody UsuarioRol rol){return rolService.guardarNuevoRol(rol);}
 }

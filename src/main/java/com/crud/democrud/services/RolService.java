@@ -16,7 +16,7 @@ public class RolService {
 
     public ArrayList<UsuarioRol> obtenerTodosLosRoles(){return (ArrayList<UsuarioRol>) rolRepository.findAll();}
 
-    public UsuarioRol guardarNuevoRol(UsuarioRol rol, UsuarioModel usuarioid){return rolRepository.save(rol, usuarioid);}
+    public UsuarioRol guardarNuevoRol(UsuarioRol rol){return rolRepository.save(rol);}
 
     public Optional<UsuarioRol> actualizarRol(Long id){return rolRepository.findById(id);}
 
