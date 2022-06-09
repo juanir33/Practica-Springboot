@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @CrossOrigin
 @RestController
@@ -24,4 +25,16 @@ public class RolController {
     @PostMapping()
 
     public UsuarioRol guardarNuevoRol(@RequestBody UsuarioRol rol){return rolService.guardarNuevoRol(rol);}
+
+
+
+    @DeleteMapping(path = "/{id}")
+    public String eliminarPorId(@PathVariable("id") Long id) {
+        boolean ok = this.rolService.eliminarRol(id);
+        if (ok) {
+            return "Se eliminó el rol con id " + id;
+        } else {
+            return "No pudo eliminar el rol con id" + id;
+        }
+    }
 }

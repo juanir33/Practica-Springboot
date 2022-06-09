@@ -18,7 +18,14 @@ public class RolService {
 
     public UsuarioRol guardarNuevoRol(UsuarioRol rol){return rolRepository.save(rol);}
 
-    public Optional<UsuarioRol> actualizarRol(Long id){return rolRepository.findById(id);}
 
 
+    public boolean eliminarRol(Long id) {
+        try{
+            rolRepository.deleteById(id);
+            return true;
+        }catch(Exception err){
+            return false;
+        }
+    }
 }
