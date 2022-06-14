@@ -20,6 +20,10 @@ Pedido GET de todos los roles
 Pedido POST de un nuevo rol
 ![Imagen de pedido get roles postman](https://raw.githubusercontent.com/juanir33/Practica-Springboot/main/src/main/imgs/post.jpg)
 
+![Imagen de pedido get roles postman](https://raw.githubusercontent.com/juanir33/Practica-Springboot/main/src/main/imgs/post2.jpg)
+
+![Imagen de pedido get roles postman](https://raw.githubusercontent.com/juanir33/Practica-Springboot/main/src/main/imgs/post3.jpg)
+
 
 
 Prueba unitaria sobre el metodo de guardar usuario
