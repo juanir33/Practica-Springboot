@@ -20,7 +20,8 @@ public class UsuarioModel {
     private Integer prioridad;
 
     @OneToMany(mappedBy = "idUsuario")
-    private List<UsuarioRol> rolList;
+
+    private List<UsuarioRol> rolList= new ArrayList<>();
 
 
 

@@ -45,4 +45,9 @@ public class UsuarioController {
         }
     }
 
+    @GetMapping(path = "/email/{email}")
+    public ArrayList<UsuarioModel> obtenerUsuarioPorEmail(@PathVariable("email") String email){
+        return this.usuarioService.obtenerUsuarioPorEmail(email);
+    }
+
 }

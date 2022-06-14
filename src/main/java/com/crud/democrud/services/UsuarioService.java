@@ -39,6 +39,10 @@ public class UsuarioService {
         }
     }
 
+    public ArrayList<UsuarioModel>  obtenerUsuarioPorEmail(String email) {
+        return usuarioRepository.findByEmail(email);
+    }
+
 
     
 }
