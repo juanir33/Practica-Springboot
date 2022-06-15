@@ -50,4 +50,14 @@ public class UsuarioController {
         return this.usuarioService.obtenerUsuarioPorEmail(email);
     }
 
+    @DeleteMapping(path = "/email/{email}")
+    public String eliminarPorEmail(@PathVariable("email") String email) {
+        boolean ok = this.usuarioService.eliminarUsuarioPorEmail(email);
+        if (ok) {
+            return "Se eliminó el usuario con id " + email;
+        } else {
+            return "No pudo eliminar el usuario con id" + email;
+        }
+    }
+
 }

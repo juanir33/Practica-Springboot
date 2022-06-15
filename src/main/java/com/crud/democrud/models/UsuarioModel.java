@@ -16,7 +16,9 @@ public class UsuarioModel {
     private Long id;
 
     private String nombre;
+    @Column(unique = true, nullable = false)
     private String email;
+    @Column(unique = true, nullable = false)
     private Integer prioridad;
 
     @OneToMany(mappedBy = "idUsuario")
@@ -60,6 +62,14 @@ public class UsuarioModel {
     }
 
     public UsuarioModel() {
+
+    }
+
+    public UsuarioModel(Long id, String nombre, String email, Integer prioridad) {
+        this.id = id;
+        this.nombre = nombre;
+        this.email = email;
+        this.prioridad = prioridad;
 
     }
 

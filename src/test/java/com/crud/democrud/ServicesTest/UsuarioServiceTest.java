@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -38,5 +39,23 @@ public class UsuarioServiceTest {
     public void testListarUsuarios(){
         List<UsuarioModel> usuarioModelList=(List<UsuarioModel>) usuarioRepository.findAll();
         assertThat(usuarioModelList).size().isGreaterThan(0);
+    }
+
+    @Test
+    public void testBuscarUsuariosPorEmail(){
+        String email = "cors@corsjode.com";
+        ArrayList<UsuarioModel> listUsers = usuarioRepository.findByEmail(email);
+        assertNotNull(listUsers);
+
+
+    }
+
+    @Test
+    public void  testEliminarPorEmail(){
+        String email = "juan@gmail.com";
+        UsuarioModel usu = new UsuarioModel(1L, "juan", "juan@gmail.com", 22);
+        ArrayList<UsuarioModel> userEmail = usuarioRepository.findByEmail(email);
+
+
     }
 }
